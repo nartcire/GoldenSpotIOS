@@ -37,6 +37,13 @@
 		7C630AD429F6321D00D46034 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C630AD329F6321D00D46034 /* FirebaseRemoteConfigSwift */; };
 		7C630AD629F705EF00D46034 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C630AD529F705EF00D46034 /* FirestoreManager.swift */; };
 		7C630AD829F70DF200D46034 /* StudySpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C630AD729F70DF200D46034 /* StudySpot.swift */; };
+		7CC2942D29FE0A16008D9C80 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2942C29FE0A16008D9C80 /* LoginView.swift */; };
+		7CC2942F29FE0B18008D9C80 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2942E29FE0B18008D9C80 /* PreferencesView.swift */; };
+		7CC2943129FE0C0B008D9C80 /* StudySpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2943029FE0C0B008D9C80 /* StudySpotModel.swift */; };
+		7CC2943329FE0E0B008D9C80 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2943229FE0E0B008D9C80 /* StarRatingView.swift */; };
+		7CC2943529FE0F56008D9C80 /* StudySpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2943429FE0F56008D9C80 /* StudySpotView.swift */; };
+		7CC2943929FE16B5008D9C80 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2943829FE16B5008D9C80 /* SomeView.swift */; };
+		7CC2943B29FE25A2008D9C80 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2943A29FE25A2008D9C80 /* RatingsView.swift */; };
 		7CDFC71029F0B41700676252 /* BerkeleySpotsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFC70F29F0B41700676252 /* BerkeleySpotsApp.swift */; };
 		7CDFC71229F0B41700676252 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFC71129F0B41700676252 /* ContentView.swift */; };
 		7CDFC71429F0B41800676252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDFC71329F0B41800676252 /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 		7C630A9B29F6112B00D46034 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C630AD529F705EF00D46034 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		7C630AD729F70DF200D46034 /* StudySpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySpot.swift; sourceTree = "<group>"; };
+		7CC2942C29FE0A16008D9C80 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7CC2942E29FE0B18008D9C80 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		7CC2943029FE0C0B008D9C80 /* StudySpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySpotModel.swift; sourceTree = "<group>"; };
+		7CC2943229FE0E0B008D9C80 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		7CC2943429FE0F56008D9C80 /* StudySpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySpotView.swift; sourceTree = "<group>"; };
+		7CC2943829FE16B5008D9C80 /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
+		7CC2943A29FE25A2008D9C80 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		7CDFC70C29F0B41700676252 /* BerkeleySpots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerkeleySpots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDFC70F29F0B41700676252 /* BerkeleySpotsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerkeleySpotsApp.swift; sourceTree = "<group>"; };
 		7CDFC71129F0B41700676252 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +137,13 @@
 			children = (
 				7CDFC70F29F0B41700676252 /* BerkeleySpotsApp.swift */,
 				7CDFC71129F0B41700676252 /* ContentView.swift */,
+				7CC2942C29FE0A16008D9C80 /* LoginView.swift */,
+				7CC2943A29FE25A2008D9C80 /* RatingsView.swift */,
+				7CC2943029FE0C0B008D9C80 /* StudySpotModel.swift */,
+				7CC2943229FE0E0B008D9C80 /* StarRatingView.swift */,
+				7CC2943829FE16B5008D9C80 /* SomeView.swift */,
+				7CC2943429FE0F56008D9C80 /* StudySpotView.swift */,
+				7CC2942E29FE0B18008D9C80 /* PreferencesView.swift */,
 				7C630AD529F705EF00D46034 /* FirestoreManager.swift */,
 				7C630AD729F70DF200D46034 /* StudySpot.swift */,
 				7CDFC71D29F0B47D00676252 /* Listing.swift */,
@@ -244,11 +265,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC2943529FE0F56008D9C80 /* StudySpotView.swift in Sources */,
+				7CC2942D29FE0A16008D9C80 /* LoginView.swift in Sources */,
 				7CDFC71229F0B41700676252 /* ContentView.swift in Sources */,
 				7CDFC71E29F0B47D00676252 /* Listing.swift in Sources */,
 				7CDFC71029F0B41700676252 /* BerkeleySpotsApp.swift in Sources */,
 				7C630AD629F705EF00D46034 /* FirestoreManager.swift in Sources */,
 				7C630AD829F70DF200D46034 /* StudySpot.swift in Sources */,
+				7CC2943B29FE25A2008D9C80 /* RatingsView.swift in Sources */,
+				7CC2943929FE16B5008D9C80 /* SomeView.swift in Sources */,
+				7CC2942F29FE0B18008D9C80 /* PreferencesView.swift in Sources */,
+				7CC2943129FE0C0B008D9C80 /* StudySpotModel.swift in Sources */,
+				7CC2943329FE0E0B008D9C80 /* StarRatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
