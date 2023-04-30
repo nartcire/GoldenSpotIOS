@@ -17,7 +17,6 @@ struct ListingsView: View {
         NavigationView {
             List {
                 ForEach(firestoreManager.filteredStudySpotList) { temp in
-                    //Listing(img: temp.img, locationName: temp.locationName, locationAddress: temp.locationAddress, numStars: temp.numStars, wifi: temp.wifi, outlets: temp.outlets, foodDrink: temp.foodDrink, quietSpace: temp.quietSpace, onCampus: temp.onCampus, restrooms: temp.restrooms, openToPublic: temp.openToPublic)
                     StudySpotView(studySpotInstance: temp)
                         .padding()
                 }

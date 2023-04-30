@@ -38,12 +38,10 @@ class FirestoreManager: ObservableObject {
                     let studySpot = StudySpot(img: img, locationName: name, locationAddress: address, numStars: numStars, wifi: wifi, outlets: outlets, foodDrink: foodDrink, quietSpace: quietSpace, onCampus: onCampus, restrooms: restrooms, openToPublic: openToPublic, closingTime: closingTime, liked: liked)
                     
                     self.studySpotList.append(studySpot)
+                    self.filteredStudySpotList.append(studySpot)
                 }
             }
-            
         }
-        
-        search();
     }
     
     func search(with searchText: String = "") {

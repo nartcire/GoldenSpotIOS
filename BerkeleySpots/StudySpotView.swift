@@ -13,11 +13,11 @@ struct StudySpotView: View {
     var body: some View {
         //NavigationStack {
             HStack {
-                //NavigationLink {
-                    //Listing(img: studySpotInstance.img, locationName: studySpotInstance.locationName, locationAddress: studySpotInstance.locationAddress, numStars: studySpotInstance.numStars, wifi: studySpotInstance.wifi, outlets: studySpotInstance.outlets, foodDrink: studySpotInstance.foodDrink, quietSpace: studySpotInstance.quietSpace, onCampus: studySpotInstance.onCampus, restrooms: studySpotInstance.restrooms, openToPublic: studySpotInstance.openToPublic)
-                //} label: {
+                NavigationLink {
+                    Listing(img: studySpotInstance.img, locationName: studySpotInstance.locationName, locationAddress: studySpotInstance.locationAddress, numStars: studySpotInstance.numStars, wifi: studySpotInstance.wifi, outlets: studySpotInstance.outlets, foodDrink: studySpotInstance.foodDrink, quietSpace: studySpotInstance.quietSpace, onCampus: studySpotInstance.onCampus, restrooms: studySpotInstance.restrooms, openToPublic: studySpotInstance.openToPublic)
+                } label: {
                     Image(studySpotInstance.img).resizable().frame(width: 130, height: 130).aspectRatio(contentMode: .fill).cornerRadius(10)
-                //}
+                }
                 
                 VStack {
                     // information about the study spot instance
