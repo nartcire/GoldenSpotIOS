@@ -12,11 +12,11 @@ struct StarRatingView: View {
     
     var body: some View {
         HStack {
-            ForEach(1...studySpotInstance.rating, id: \.self) {star in
+            ForEach(1...studySpotInstance.numStars, id: \.self) {star in
                 Image(systemName: "star.fill")
             }
-            if studySpotInstance.rating < 5 {
-                ForEach(studySpotInstance.rating + 1...5, id: \.self) {star in
+            if studySpotInstance.numStars < 5 {
+                ForEach(studySpotInstance.numStars + 1...5, id: \.self) {star in
                     Image(systemName: "star")
                 }
             }
@@ -24,8 +24,10 @@ struct StarRatingView: View {
     }
 }
 
-struct StarRatingView_Previews: PreviewProvider {
-    static var previews: some View {
-        StarRatingView()
-    }
-}
+/*
+ struct StarRatingView_Previews: PreviewProvider {
+ static var previews: some View {
+ StarRatingView()
+ }
+ }
+ */

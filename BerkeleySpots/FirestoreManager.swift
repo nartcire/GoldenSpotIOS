@@ -10,6 +10,7 @@ import Firebase
 
 class FirestoreManager: ObservableObject {
     @Published var studySpotList: [StudySpot] = []
+    @Published var filteredStudySpotList: [StudySpot] = []
     
     func fetchStudySpots() {
         let db = Firestore.firestore()
@@ -31,13 +32,21 @@ class FirestoreManager: ObservableObject {
                     let onCampus: Bool = data["onCampus"] as? Bool ?? false
                     let restrooms: Bool = data["restrooms"] as? Bool ?? false
                     let openToPublic: Bool = data["openToPublic"] as? Bool ?? false
+                    let closingTime: String = data["closingTime"] as? String ?? ""
+                    let liked: Bool = data["liked"] as? Bool ?? false
                     
-                    let studySpot = StudySpot(img: img, locationName: name, locationAddress: address, numStars: numStars, wifi: wifi, outlets: outlets, foodDrink: foodDrink, quietSpace: quietSpace, onCampus: onCampus, restrooms: restrooms, openToPublic: openToPublic)
+                    let studySpot = StudySpot(img: img, locationName: name, locationAddress: address, numStars: numStars, wifi: wifi, outlets: outlets, foodDrink: foodDrink, quietSpace: quietSpace, onCampus: onCampus, restrooms: restrooms, openToPublic: openToPublic, closingTime: closingTime, liked: liked)
                     
                     self.studySpotList.append(studySpot)
+                    self.filteredStudySpotList.append(studySpot)
                 }
             }
-            
+        }
+    }
+    
+    func search(with searchText: String = "") {
+        filteredStudySpotList = searchText.isEmpty ? studySpotList : studySpotList.filter {studySpot in
+            return studySpot.locationName.contains(searchText)
         }
     }
     
