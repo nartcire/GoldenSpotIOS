@@ -19,8 +19,10 @@ class StudySpot: ObservableObject, Identifiable {
     var onCampus: Bool
     var restrooms: Bool
     var openToPublic: Bool
+    var closingTime: String
+    var liked: Bool
     
-    init(img: String, locationName: String, locationAddress: String, numStars: Int, wifi: Bool, outlets: Bool, foodDrink: Bool, quietSpace: Bool, onCampus: Bool, restrooms: Bool, openToPublic: Bool) {
+    init(img: String, locationName: String, locationAddress: String, numStars: Int, wifi: Bool, outlets: Bool, foodDrink: Bool, quietSpace: Bool, onCampus: Bool, restrooms: Bool, openToPublic: Bool, closingTime: String, liked: Bool) {
         self.img = img
         self.locationName = locationName
         self.locationAddress = locationAddress
@@ -32,5 +34,9 @@ class StudySpot: ObservableObject, Identifiable {
         self.onCampus = onCampus
         self.restrooms = restrooms
         self.openToPublic = openToPublic
+        self.closingTime = closingTime
+        self.liked = liked
     }
+    
+    
 }

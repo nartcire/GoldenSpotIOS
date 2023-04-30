@@ -17,7 +17,7 @@ struct StudySpot: Identifiable {
     // TODO: declare open or closed variable
 }
 
-struct starRatingView: View {
+struct StarRatingView: View {
     var studySpotInstance: StudySpot
     
     var body: some View {
