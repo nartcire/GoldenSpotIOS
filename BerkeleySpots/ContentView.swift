@@ -13,6 +13,7 @@ struct ContentView: View {
     @EnvironmentObject var firestoreManager: FirestoreManager
     
     var body: some View {
+        /*
         VStack {
             NavigationStack {
                 ForEach(firestoreManager.studySpotList) { temp in
@@ -25,6 +26,8 @@ struct ContentView: View {
                 }
             }
         }
+        */
+        ListingsView(firestoreManager: _firestoreManager)
     }
 }
 
