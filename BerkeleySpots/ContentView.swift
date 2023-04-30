@@ -13,7 +13,7 @@ struct ContentView: View {
     @EnvironmentObject var firestoreManager: FirestoreManager
     
     var body: some View {
-        LoginView()
+        PreferencesView()
     }
 }
 
