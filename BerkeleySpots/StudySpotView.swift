@@ -28,9 +28,11 @@ struct StudySpotView: View {
                         StarRatingView(studySpotInstance: studySpotInstance)
                         // heart button
                         Button(action:{studySpotInstance.liked.toggle()},
-                               label:{Image(studySpotInstance.liked ? "Filled in Heart Image" : "Empty Heart Image").resizable().frame(width:20, height:20)}).frame(width: 20,height: 20)
-                    }.padding(10)
+                               label: { studySpotInstance.liked ? Image(systemName: "heart.fill") : Image(systemName: "heart") } )
+                        .padding(10)
+                    }
                     Text(studySpotInstance.closingTime)
+                        .foregroundColor(.white)
                 }
                 Spacer()
             }
@@ -46,3 +48,9 @@ struct StudySpotView: View {
  }
  }
  */
+
+struct Previews_StudySpotView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
