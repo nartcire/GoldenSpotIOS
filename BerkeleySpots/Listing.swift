@@ -52,12 +52,14 @@ struct Listing: View {
                             .foregroundColor(.white)
                             .font(.system(size: 28))
                             .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
                             .padding(.bottom, 1.0)
                         
                         Text(locationAddress)
                             .foregroundColor(.white)
                             .font(.system(size: 12))
                             .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
                             .padding(.bottom, 6.0)
                         
                         HStack {
