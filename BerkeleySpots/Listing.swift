@@ -34,126 +34,141 @@ struct Listing: View {
         return [wifi, outlets, foodDrink, quietSpace, onCampus, restrooms, openToPublic]
     }
     
+    @State private var goesToReview: Bool = false
+    
     var body: some View {
-        ZStack {
-            Color("BerkeleyBlue")
-                .ignoresSafeArea()
-            
-            GeometryReader { geometry in
-                ScrollView {
-                    
-                    VStack {
-                        Image(img)
-                            .resizable()
-                            .ignoresSafeArea()
-                            .aspectRatio(contentMode: .fit)
-                        
-                        Text(locationName)
-                            .foregroundColor(.white)
-                            .font(.system(size: 28))
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-                            .padding(.bottom, 1.0)
-                        
-                        Text(locationAddress)
-                            .foregroundColor(.white)
-                            .font(.system(size: 12))
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-                            .padding(.bottom, 6.0)
-                        
-                        HStack {
-                            ForEach(numGoldStarsRange, id: \.self) { num in
-                                Image(systemName: "star.fill")
-                            }
+        NavigationStack {
+            ZStack {
+                Color("BerkeleyBlue")
+                    .ignoresSafeArea()
+                
+                GeometryReader { geometry in
+                    ScrollView {
+                        VStack {
+                            Image(img)
+                                .resizable()
+                                .ignoresSafeArea()
+                                .aspectRatio(contentMode: .fit)
                             
-                            ForEach(numGreyStarsRange, id: \.self) {num in
-                                Image(systemName: "star")
-                            }
-                        }
-                        .foregroundColor(.yellow)
-                        
-                        Divider()
-                            .frame(height: 2)
-                            .overlay(.white)
-                            .padding([.top, .leading, .trailing])
-                        
-                        Text("General Information")
-                            .foregroundColor(.white)
-                            .font(.system(size: 26))
-                            .fontWeight(.bold)
-                            .padding(.bottom, 5.0)
-                        
-                        HStack(alignment: .top) {
+                            Text(locationName)
+                                .foregroundColor(.white)
+                                .font(.system(size: 28))
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom, 1.0)
                             
-                            Spacer()
+                            Text(locationAddress)
+                                .foregroundColor(.white)
+                                .font(.system(size: 12))
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom, 6.0)
                             
-                            VStack(alignment: .leading) {
-                                ForEach((0..<5), id: \.self) { index in
-                                    HStack {
-                                        if booleanArr[index] {
-                                            Image(systemName: "checkmark")
-                                                .foregroundColor(.white)
-                                                .fontWeight(.heavy)
-                                        } else {
-                                            Image(systemName: "xmark")
-                                                .foregroundColor(.white)
-                                                .fontWeight(.heavy)
-                                        }
-                                        
-                                        Text(attrivuteArr[index])
-                                            .fontWeight(.medium)
-                                            .foregroundColor(.white)
-                                            .font(.system(size: 20))
-                                    }
-                                    .padding(.bottom, 1.0)
+                            HStack {
+                                ForEach(numGoldStarsRange, id: \.self) { num in
+                                    Image(systemName: "star.fill")
+                                }
+                                
+                                ForEach(numGreyStarsRange, id: \.self) {num in
+                                    Image(systemName: "star")
                                 }
                             }
+                            .foregroundColor(.yellow)
                             
-                            Spacer()
+                            Divider()
+                                .frame(height: 2)
+                                .overlay(.white)
+                                .padding([.top, .leading, .trailing])
                             
-                            VStack(alignment: .leading) {
-                                ForEach((5..<7), id: \.self) { index in
-                                    HStack() {
-                                        if booleanArr[index] {
-                                            Image(systemName: "checkmark")
+                            Text("General Information")
+                                .foregroundColor(.white)
+                                .font(.system(size: 26))
+                                .fontWeight(.bold)
+                                .padding(.bottom, 5.0)
+                            
+                            HStack(alignment: .top) {
+                                
+                                Spacer()
+                                
+                                VStack(alignment: .leading) {
+                                    ForEach((0..<5), id: \.self) { index in
+                                        HStack {
+                                            if booleanArr[index] {
+                                                Image(systemName: "checkmark")
+                                                    .foregroundColor(.white)
+                                                    .fontWeight(.heavy)
+                                            } else {
+                                                Image(systemName: "xmark")
+                                                    .foregroundColor(.white)
+                                                    .fontWeight(.heavy)
+                                            }
+                                            
+                                            Text(attrivuteArr[index])
+                                                .fontWeight(.medium)
                                                 .foregroundColor(.white)
-                                                .fontWeight(.heavy)
-                                        } else {
-                                            Image(systemName: "xmark")
-                                                .foregroundColor(.white)
-                                                .fontWeight(.heavy)
+                                                .font(.system(size: 20))
                                         }
-                                        
-                                        Text(attrivuteArr[index])
-                                            .fontWeight(.medium)
-                                            .foregroundColor(.white)
-                                            .font(.system(size: 20))
+                                        .padding(.bottom, 1.0)
                                     }
-                                    .padding(.bottom, 1.0)
                                 }
+                                
+                                Spacer()
+                                
+                                VStack(alignment: .leading) {
+                                    ForEach((5..<7), id: \.self) { index in
+                                        HStack() {
+                                            if booleanArr[index] {
+                                                Image(systemName: "checkmark")
+                                                    .foregroundColor(.white)
+                                                    .fontWeight(.heavy)
+                                            } else {
+                                                Image(systemName: "xmark")
+                                                    .foregroundColor(.white)
+                                                    .fontWeight(.heavy)
+                                            }
+                                            
+                                            Text(attrivuteArr[index])
+                                                .fontWeight(.medium)
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 20))
+                                        }
+                                        .padding(.bottom, 1.0)
+                                    }
+                                }
+                                
+                                Spacer()
                             }
                             
-                            Spacer()
+                            Divider()
+                                .frame(height: 2)
+                                .overlay(.white)
+                                .padding([.top, .leading, .trailing])
+                            
+                            Text("Reviews")
+                                .foregroundColor(.white)
+                                .font(.system(size: 26))
+                                .fontWeight(.bold)
+                                .padding(.bottom, 50)
+                            
+                            NavigationLink(
+                                destination: RatingsView(),
+                                isActive: $goesToReview) {
+                                Button(action: { goesToReview = true }) {
+                                    Text("Write a review!")
+                                        .font(.headline)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 200, height: 40)
+                                        .background(Color("Mustard"))
+                                        .cornerRadius(30)
+                                }
+                            }
                         }
-                        
-                        Divider()
-                            .frame(height: 2)
-                            .overlay(.white)
-                            .padding([.top, .leading, .trailing])
-                        
-                        Text("Reviews")
-                            .foregroundColor(.white)
-                            .font(.system(size: 26))
-                            .fontWeight(.bold)
-                            .padding(.bottom, 5.0)
-                        
-                        
                     }
                 }
-                
+                .ignoresSafeArea()
             }
-            .ignoresSafeArea()
         }
     }
 }

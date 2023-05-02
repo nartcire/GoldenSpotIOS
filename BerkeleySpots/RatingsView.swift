@@ -33,20 +33,20 @@ struct RatingsView: View {
                 VStack{
                     
                     Text("How was everything?")
-                        .font(.system(size: 25))
-                        .bold()
+                        .font(.system(size: 30))
+                        .fontWeight(.bold)
                         .foregroundColor(californiaGold)
-                        .padding(1)
+                        .padding(.top, 10.0)
                     
                     TextField("Enter your review here", text: $review)
-                        .frame(width: 300, height: 200)
+                        .frame(width: 300.0, height: 200)
                         .background(Color.white)
                         .cornerRadius(8)
                         .lineLimit(nil)
                         .textContentType(.none)
-                        .padding()
                         .multilineTextAlignment(.leading)
                         .textFieldStyle(.roundedBorder)
+                        .padding(.bottom, 10)
                     
                     Text("Describe Your Issues")
                         .font(.system(size: 20))
@@ -99,12 +99,10 @@ struct RatingsView: View {
                         }
                     }
                     .padding(1)
-                    
                 }
                 
                 //Submit button
                 VStack{
-                    Spacer()
                     Button(action: {
                                 // Submit button action
                             print("Submit button tapped!")

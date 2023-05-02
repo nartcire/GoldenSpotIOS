@@ -16,9 +16,17 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             ZStack{
-                Color.accentColor
+                Color("BerkeleyBlue")
+                    .ignoresSafeArea()
                 VStack {
-                    Spacer().frame(height:250)
+                    
+                    Spacer()
+                    
+                    Image("BerkeleyBear")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250, height: 250)
+                    
                     TextField("Username", text: $username)
                         .padding()
                         .frame(width:300, height:38)
@@ -42,16 +50,18 @@ struct LoginView: View {
                     .frame(width:80, height: 40)
                     .background(Color("Mustard")
                     .cornerRadius(12))
-                    Spacer().frame(height:250)
-                    HStack{
-                        Spacer()
-                        Button("Sign Up") {
-                        }
+                    
+                    Spacer()
+                    
+                    Text("Don't have an account?")
                         .foregroundColor(.white)
-                        .frame(width: 100, height: 18)
-                        .underline()
-                        
+                    
+                    Button("Sign Up") {
                     }
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 18)
+                    .underline()
+                        
                 }
             }
         }

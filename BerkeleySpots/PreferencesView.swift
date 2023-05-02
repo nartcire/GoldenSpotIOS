@@ -59,7 +59,9 @@ struct PreferencesView: View {
     var body: some View {
         NavigationStack {
             ZStack{
-                Color.accentColor
+                Color("BerkeleyBlue")
+                    .ignoresSafeArea()
+                
                 VStack {
                     Text("What are your study").font(.system(size: 30)).frame(maxWidth: .infinity, alignment: .center).foregroundColor(.white)
                     Text("spot preferences?").font(.system(size: 30)).frame(maxWidth: .infinity, alignment: .center).foregroundColor(.white)
@@ -247,7 +249,6 @@ struct PreferencesView: View {
                 }
                 
             }
-            .padding()
         }
     }
 }
